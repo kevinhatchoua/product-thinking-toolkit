@@ -1,0 +1,27 @@
+---
+description: >
+  Cognitive bias risks—confirmation, sunk cost, automation bias, optimism bias.
+  Use for AI automation, dashboards, recommendations, retention, or experiment readouts.
+globs:
+  - "src/components/**/*.{tsx,jsx}"
+  - "src/pages/**/*.{tsx,jsx}"
+  - "app/**/*.{tsx,jsx}"
+  - "**/*{dashboard,analytics,recommend,autopilot,forecast,onboarding}*"
+alwaysApply: false
+---
+
+# Cognitive Bias Review
+
+## Load the full skill
+
+1. `.cursor/skills/cognitive-bias-review/SKILL.md`
+2. `.claude/skills/cognitive-bias-review/SKILL.md`
+3. `skills/cognitive-bias-review/SKILL.md`
+
+## When active
+
+1. Name the decision under influence and cost of wrong yes/no.
+2. Run: confirmation, sunk cost, automation, optimism (+ related amplifiers).
+3. Prefer de-biasing interventions (consider-the-opposite, ranges/base rates, preview before auto-apply).
+4. Emit the skill **Output Schema**.
+5. Overall = minimum of Disconfirming evidence, Automation calibration, Exit/sunk-cost neutrality when blast radius is high.

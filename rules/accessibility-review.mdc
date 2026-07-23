@@ -1,0 +1,28 @@
+---
+description: >
+  WCAG 2.2 AA/AAA-oriented accessibility review—keyboard/focus, screen reader
+  semantics, perceivable presentation, cognitive load. Use for UI components
+  and complex widgets.
+globs:
+  - "src/components/**/*.{tsx,jsx}"
+  - "src/pages/**/*.{tsx,jsx}"
+  - "app/**/*.{tsx,jsx}"
+  - "**/*.{tsx,jsx,vue,html,css,scss}"
+alwaysApply: false
+---
+
+# Accessibility Review
+
+## Load the full skill
+
+1. `.cursor/skills/accessibility-review/SKILL.md`
+2. `.claude/skills/accessibility-review/SKILL.md`
+3. `skills/accessibility-review/SKILL.md`
+
+## When active
+
+1. Reason through keyboard/focus and SR semantics—not automation alone.
+2. Map findings to WCAG 2.2 SCs when known; mark “SC TBD—verify” if unsure.
+3. Include cognitive load and alternatives for charts/AI widgets.
+4. Emit the skill **Output Schema**.
+5. Keyboard trap, unlabeled primary control, or impossible SR task ⇒ overall ≤ 2.

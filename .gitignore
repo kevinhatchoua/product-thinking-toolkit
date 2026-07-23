@@ -1,0 +1,13 @@
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.log
+.env
+.env.*
+node_modules/
+dist/
+.cursor/skills/
+.claude/skills/

@@ -1,0 +1,29 @@
+---
+description: >
+  Nielsen Norman 10-heuristics evaluation plus Enterprise SaaS / complex workflow
+  extensions. Use when editing admin UIs, wizards, settings, tables, or dense flows.
+globs:
+  - "src/components/**/*.{tsx,jsx}"
+  - "src/pages/**/*.{tsx,jsx}"
+  - "app/**/*.{tsx,jsx}"
+  - "**/*{admin,settings,wizard,table,form,rbac,console,dashboard}*"
+alwaysApply: false
+---
+
+# UX Heuristic Review
+
+## Load the full skill
+
+1. `.cursor/skills/ux-heuristic-review/SKILL.md`
+2. `.claude/skills/ux-heuristic-review/SKILL.md`
+3. `skills/ux-heuristic-review/SKILL.md`
+
+## When active
+
+1. Frame persona + primary tasks; walk tasks (not screenshot-only).
+2. Score NNg H1–H10 and Enterprise extensions E1–E8.
+3. Prioritize by severity × frequency × organizational error cost.
+4. Emit the skill **Output Schema**.
+5. Any Sev-4 issue on a primary task ⇒ overall score ≤ 2.
+
+Reminders: permission tooltips on disabled actions, proportional destroy confirms, async progress + failure visibility, consistent domain language.
