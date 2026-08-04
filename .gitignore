@@ -12,6 +12,5 @@ dist/
 .cursor/skills/
 .claude/skills/
 
-# Prototype pipeline clones are huge; keep artifacts local
-.artifacts/**/workspace/
-.artifacts/**/workspace/**
+# Prototype pipeline output (includes console clones) — keep local
+.artifacts/
