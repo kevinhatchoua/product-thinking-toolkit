@@ -1,4 +1,4 @@
-# Dark Pattern Review — Checklist
+# Deceptive Pattern Review — Checklist
 
 Use during PR/design review. Mark **Pass / Fail / N/A**. Any **Fail** in a Critical row blocks ship until remediated or explicitly risk-accepted by PM + Legal/Privacy.
 

@@ -17,6 +17,7 @@ DUAL HOST NOTES
     2. .claude/skills/<name>/SKILL.md
     3. skills/<name>/SKILL.md
 - Installer: scripts/install.sh [all|cursor|claude] [project|user] [path]
+- Repo: product-thinking-toolkit (focused set: deceptive patterns, cognitive bias, a11y, UXD heuristics)
 
 CURSOR RULE ADAPTER (.mdc) frontmatter example:
 

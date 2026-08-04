@@ -1,4 +1,4 @@
-# Dark Pattern Review — Additional Examples
+# Deceptive Pattern Review — Additional Examples
 
 ## Example 1: Pass — Consent banner with parity
 
@@ -30,7 +30,7 @@ User clicks “Not now” on upgrade modal. Button label: “No thanks, I hate s
 Disabling SSO-enforced org access requires admin approval + waiting period. Signup for org members is invite-only (also gated).
 
 ### How to score
-Friction asymmetry alone is **not** a dark pattern if both directions are gated for security and disclosed. Check for **sneaking** (e.g., hidden paid seats) separately. Score Friction symmetry **N/A** or **4–5** with note: “security-justified parity.”
+Friction asymmetry alone is **not** a deceptive pattern if both directions are gated for security and disclosed. Check for **sneaking** (e.g., hidden paid seats) separately. Score Friction symmetry **N/A** or **4–5** with note: “security-justified parity.”
 
 ---
 

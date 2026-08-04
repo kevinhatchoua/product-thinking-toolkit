@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install awesome-product-thinking-skills into Cursor and/or Claude Code.
+# Install product-thinking-toolkit into Cursor and/or Claude Code.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -93,5 +93,5 @@ esac
 
 echo
 echo "Done. Invoke in chat, e.g.:"
-echo "  Use the dark-pattern-review skill on this checkout flow."
-echo "  Run accessibility-review on the AI Insights drawer."
+echo "  Use the deceptive-pattern-review skill on this checkout flow."
+echo "  Run uxd-evaluate-design-heuristics on these screenshots."

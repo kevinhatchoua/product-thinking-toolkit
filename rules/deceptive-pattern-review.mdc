@@ -1,5 +1,5 @@
 ---
-description: Triggers a Dark Pattern & Ethical Design review on UI components and user flows.
+description: Triggers a Deceptive Pattern & Ethical Design review on UI components and user flows.
 globs:
   - "src/components/**/*.{tsx,jsx}"
   - "src/pages/**/*.{tsx,jsx}"
@@ -8,17 +8,17 @@ globs:
 alwaysApply: false
 ---
 
-# Dark Pattern & Ethical Design Reviewer
+# Deceptive Pattern & Ethical Design Reviewer
 
-When matching files are in context (or the user asks for a dark-pattern / ethical UX review), run this review before treating the UI as shippable.
+When matching files are in context (or the user asks for a deceptive / dark-pattern / ethical UX review), run this review before treating the UI as shippable.
 
 ## Load the full skill
 
 Read and follow (first match wins):
 
-1. `.cursor/skills/dark-pattern-review/SKILL.md` (Cursor)
-2. `.claude/skills/dark-pattern-review/SKILL.md` (Claude Code)
-3. `skills/dark-pattern-review/SKILL.md` (this repository)
+1. `.cursor/skills/deceptive-pattern-review/SKILL.md` (Cursor)
+2. `.claude/skills/deceptive-pattern-review/SKILL.md` (Claude Code)
+3. `skills/deceptive-pattern-review/SKILL.md` (this repository)
 
 Also use the sibling `checklist.md` when present.
 

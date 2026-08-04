@@ -1,0 +1,28 @@
+---
+description: >
+  Score a design against accessibility, visual hierarchy, content, and state
+  coverage heuristics (UXD Evaluate Design Heuristics from rh-uxd/ai-helpers).
+  Use for AI design critique, heuristic review, or comparing design directions.
+globs:
+  - "**/*.{tsx,jsx,vue,html,css,scss,md}"
+  - "src/components/**/*.{tsx,jsx}"
+  - "src/pages/**/*.{tsx,jsx}"
+alwaysApply: false
+---
+
+# Evaluate Design Heuristics (UXD)
+
+## Load the full skill
+
+1. `.cursor/skills/uxd-evaluate-design-heuristics/SKILL.md`
+2. `.claude/skills/uxd-evaluate-design-heuristics/SKILL.md`
+3. `skills/uxd-evaluate-design-heuristics/SKILL.md`
+
+Upstream source: https://github.com/rh-uxd/ai-helpers (`plugins/uxd-workshop/skills/uxd-evaluate-design-heuristics/`).
+
+## When active
+
+1. Require visual input (screenshots / Figma context). Stop and ask if missing.
+2. Follow the skill workflow, rubric (`references/evaluation-rubric.md`), and report template.
+3. Score dimensions 1–5; any dimension scoring 1 or 2 ⇒ Fail verdict.
+4. Prefer the skill’s native output (verdict, scores table, critical issues, full report).

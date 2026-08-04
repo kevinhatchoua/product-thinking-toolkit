@@ -1,56 +1,48 @@
 # Contributing
 
-Thanks for helping grow **awesome-product-thinking-skills**.
+Thanks for helping grow **product-thinking-toolkit**.
 
-## Add a new skill (Phase 2+)
+## Scope
 
-1. Copy the blueprint:
-   ```bash
-   cp templates/SKILL_TEMPLATE.md skills/<skill-name>/SKILL.md
-   ```
-2. Create siblings:
-   - `skills/<skill-name>/checklist.md`
-   - `skills/<skill-name>/examples.md`
-3. Fill every required `SKILL.md` section (Purpose → Concrete Example). Depth over brevity.
-4. Add a Cursor adapter at `rules/<skill-name>.mdc` with YAML `description`, optional `globs`, and `alwaysApply: false` unless the skill should always run.
-5. Link the skill in `README.md` (table + Phase notes).
-6. Open a PR with a conventional commit, e.g. `feat: add jobs-to-be-done-review skill`.
+Keep the toolkit focused. Canonical skills:
+
+1. `deceptive-pattern-review`
+2. `cognitive-bias-review`
+3. `accessibility-review`
+4. `uxd-evaluate-design-heuristics` (vendored from [rh-uxd/ai-helpers](https://github.com/rh-uxd/ai-helpers) — prefer upstream PRs there)
+
+New skills need a clear reason they belong in this focused set (not a general product-management encyclopedia).
+
+## Add or update a toolkit-owned skill
+
+1. Copy `templates/SKILL_TEMPLATE.md` → `skills/<name>/SKILL.md`
+2. Add `checklist.md` + `examples.md`
+3. Add `rules/<name>.mdc` with dual load paths
+4. Update `README.md` + `AGENTS.md`
+5. Ensure `./scripts/install.sh` still copies all skills
+
+## Refresh the UXD heuristics skill from upstream
+
+```bash
+mkdir -p skills/uxd-evaluate-design-heuristics/references
+for f in SKILL.md references/evaluation-rubric.md references/report-template.md; do
+  gh api "repos/rh-uxd/ai-helpers/contents/plugins/uxd-workshop/skills/uxd-evaluate-design-heuristics/$f" \
+    --jq .content | base64 -d > "skills/uxd-evaluate-design-heuristics/$f"
+done
+```
 
 ## Quality bar
 
 | Requirement | Bar |
 |-------------|-----|
 | Criteria | Precise, falsifiable, evidence-seeking |
-| Rubric | 1–5 with dimension anchors; safety dims use **min** not average |
-| Example | Full structured output, not a stub |
+| Rubric | Clear scores; safety dims use **min** not average where applicable |
+| Example | Full structured output for toolkit-authored skills |
 | Dual format | Works as Skill (`SKILL.md`) and Rule (`.mdc`) |
 | Citations | Do not invent research metrics or legal conclusions |
-
-## Phase 3 skill backlog (suggested)
-
-| Skill | Focus |
-|-------|-------|
-| `systems-thinking-review` | Second-order effects, feedback loops, ops load |
-| `pricing-value-ethics-review` | Value communication, lock-in, fairness |
-| `trust-safety-review` | Abuse, misuse, vulnerable users |
-| `metric-goodhart-review` | Vanity metrics, perverse incentives |
-| `accessibility-equity-review` | Equity of use beyond WCAG compliance checklists |
-
-## Dual host requirements
-
-New skills must work on **Cursor** and **Claude Code** without host-specific forks:
-
-1. Valid `SKILL.md` YAML: `name` + `description` (third person, trigger terms).
-2. Matching `rules/<name>.mdc` with dual load paths (`.cursor/skills` → `.claude/skills` → `skills/`).
-3. Installable via `./scripts/install.sh`.
 
 ## Local install smoke test
 
 ```bash
 ./scripts/install.sh all project /path/to/your-app
-# or user-global:
-./scripts/install.sh claude user
-./scripts/install.sh cursor user
 ```
-
-Then in chat: `Use the dark-pattern-review skill on <artifact>.`

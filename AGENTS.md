@@ -1,35 +1,28 @@
-# Agent instructions — awesome-product-thinking-skills
+# Agent instructions — product-thinking-toolkit
 
-This repository is a **library of evaluation skills** for product/UX/ethics reviews. Use it from Cursor, Claude Code, or any agent that can load `SKILL.md` files.
+Focused library of **product-thinking evaluation skills** for Cursor, Claude Code, and custom agents.
 
 ## How to load skills
 
 | Host | Skills path | Rules path |
 |------|-------------|------------|
-| **Cursor** | `.cursor/skills/<name>/SKILL.md` or `~/.cursor/skills/<name>/SKILL.md` | `.cursor/rules/<name>.mdc` |
-| **Claude Code** | `.claude/skills/<name>/SKILL.md` or `~/.claude/skills/<name>/SKILL.md` | N/A (use skills) |
-| **This repo (dev)** | `skills/<name>/SKILL.md` | `rules/<name>.mdc` |
-
-Install with:
+| **Cursor** | `.cursor/skills/<name>/SKILL.md` | `.cursor/rules/<name>.mdc` |
+| **Claude Code** | `.claude/skills/<name>/SKILL.md` | N/A (use skills) |
+| **This repo** | `skills/<name>/SKILL.md` | `rules/<name>.mdc` |
 
 ```bash
 ./scripts/install.sh all project .
-# or: ./scripts/install.sh claude user
-# or: ./scripts/install.sh cursor user
 ```
 
 ## Available skills
 
-- `dark-pattern-review` — deceptive design, consent, asymmetric friction
-- `ux-heuristic-review` — NNg 10 + enterprise workflow heuristics
-- `ai-transparency-review` — AI disclosure, trust calibration, HITL, NIST/MS RAI lenses
+- `deceptive-pattern-review` — deceptive / dark patterns, consent, asymmetric friction
 - `cognitive-bias-review` — confirmation, sunk cost, automation, optimism bias
-- `jobs-to-be-done-review` — situation, trigger, job layers, barriers
-- `decision-quality-review` — assumptions, evidence, reversibility, opportunity cost
 - `accessibility-review` — WCAG 2.2, focus, screen readers, cognitive load
+- `uxd-evaluate-design-heuristics` — UXD design critique rubric (from rh-uxd/ai-helpers)
 
 ## Invocation
 
-When the user asks for a review matching a skill, **read that skill’s `SKILL.md` first**, then follow its Step-by-Step Framework and **Output Schema** exactly. Use `checklist.md` for pass/fail speed; use `examples.md` for calibration.
+When the user asks for a matching review, **read that skill’s `SKILL.md` first**, then follow its framework and output schema exactly.
 
 Do not invent metrics, legal conclusions, or WCAG criterion numbers. Prefer evidence from the artifacts under review.
